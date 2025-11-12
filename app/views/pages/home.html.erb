@@ -43,14 +43,16 @@
 </section>
 
 <!-- Services Section -->
-<section id="servicos" class="section-light">
+<section class="py-20 lg:py-24 bg-white">
   <div class="container-custom">
-    <%= render 'shared/section_header', 
-      title: t('services.title'), 
-      subtitle: t('services.subtitle'),
-      dark: false %>
+    <div class="mb-16">
+      <%= render 'shared/section_header', 
+        title: t('services.title'), 
+        subtitle: t('services.subtitle'),
+        dark: false %>
+    </div>
     
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
       <!-- E-commerce Card -->
       <div class="card group" data-aos="fade-up" data-aos-delay="0">
         <div class="w-12 h-12 rounded-lg bg-meerkatPink/10 flex items-center justify-center mb-4 group-hover:bg-meerkatPink group-hover:scale-110 transition-all">
@@ -99,14 +101,16 @@
 </section>
 
 <!-- Process Section with Accordion -->
-<section class="section-dark">
+<section class="py-20 lg:py-24 bg-graphite">
   <div class="container-custom">
-    <%= render 'shared/section_header', 
-      title: t('process.title'), 
-      subtitle: t('process.subtitle'),
-      dark: true %>
+    <div class="mb-16">
+      <%= render 'shared/section_header', 
+        title: t('process.title'), 
+        subtitle: t('process.subtitle'),
+        dark: true %>
+    </div>
     
-    <div class="max-w-4xl mx-auto" data-aos="fade-up">
+    <div class="max-w-4xl mx-auto mt-12" data-aos="fade-up">
       <div id="accordion-process" data-accordion="collapse">
         <!-- Discovery -->
         <h2 id="accordion-process-heading-1">
@@ -185,14 +189,16 @@
 </section>
 
 <!-- Testimonials Section -->
-<section class="section-mist">
+<section class="py-20 lg:py-24 bg-mist">
   <div class="container-custom">
-    <%= render 'shared/section_header', 
-      title: t('testimonials.title'), 
-      subtitle: t('testimonials.subtitle'),
-      dark: false %>
+    <div class="mb-16">
+      <%= render 'shared/section_header', 
+        title: t('testimonials.title'), 
+        subtitle: t('testimonials.subtitle'),
+        dark: false %>
+    </div>
     
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       <% [
         { key: 'polegatch', delay: 0 },
         { key: 'madonna', delay: 100 },
@@ -229,11 +235,11 @@
 </section>
 
 <!-- Final CTA Section -->
-<section class="section-dark relative overflow-hidden">
+<section class="py-24 lg:py-32 bg-graphite relative overflow-hidden">
   <div class="absolute inset-0 bg-gradient-to-r from-meerkatPink/20 to-pink-600/20"></div>
   
   <div class="container-custom relative z-10">
-    <div class="max-w-3xl mx-auto text-center space-y-6" data-aos="zoom-in">
+    <div class="max-w-3xl mx-auto text-center space-y-8" data-aos="zoom-in">
       <h2 class="heading-lg text-white">
         <%= t('cta.title') %>
       </h2>
