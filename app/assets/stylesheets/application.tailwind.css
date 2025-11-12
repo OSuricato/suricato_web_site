@@ -18,24 +18,24 @@
 @layer components {
   /* Buttons */
   .btn-primary {
-    @apply bg-meerkatPink text-white font-semibold px-6 py-3 rounded-lg hover:bg-pink-600 transition-all duration-300 inline-flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-meerkatPink focus:ring-offset-2;
+    @apply bg-meerkatPink text-white font-semibold px-6 py-3 rounded-lg hover:bg-pink-600 hover:shadow-lg hover:shadow-meerkatPink/50 hover:-translate-y-0.5 transition-all duration-300 inline-flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-meerkatPink focus:ring-offset-2;
   }
   
   .btn-ghost {
-    @apply border-2 border-white text-white font-semibold px-6 py-3 rounded-lg hover:bg-white hover:text-graphite transition-all duration-300 inline-flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-graphite;
+    @apply border-2 border-white text-white font-semibold px-6 py-3 rounded-lg hover:bg-white hover:text-graphite hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 inline-flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-graphite;
   }
   
   .btn-secondary {
-    @apply bg-white text-graphite font-semibold px-6 py-3 rounded-lg hover:bg-mist transition-all duration-300 inline-flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-graphite focus:ring-offset-2;
+    @apply bg-white text-graphite font-semibold px-6 py-3 rounded-lg hover:bg-mist hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 inline-flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-graphite focus:ring-offset-2;
   }
   
   /* Cards */
   .card {
-    @apply bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-6;
+    @apply bg-white rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 p-6;
   }
   
   .card-dark {
-    @apply bg-graphite/50 backdrop-blur-sm border border-white/10 rounded-2xl hover:border-meerkatPink/50 transition-all duration-300 p-6;
+    @apply bg-graphite/50 backdrop-blur-sm border border-white/10 rounded-2xl hover:border-meerkatPink/50 hover:shadow-lg hover:shadow-meerkatPink/20 hover:-translate-y-1 transition-all duration-300 p-6;
   }
   
   /* Badges */
@@ -93,11 +93,60 @@ html {
   @apply outline-2 outline-offset-2 outline-meerkatPink;
 }
 
+/* Custom Animations */
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(236, 64, 122, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(236, 64, 122, 0.6); }
+}
+
+/* Animated gradient for CTA sections */
+.animated-gradient {
+  background: linear-gradient(
+    135deg,
+    #EC407A 0%,
+    #D81B60 25%,
+    #EC407A 50%,
+    #D81B60 75%,
+    #EC407A 100%
+  );
+  background-size: 200% 200%;
+  animation: gradient-shift 8s ease infinite;
+}
+
+/* Smooth page transitions */
+.page-transition {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Number counter */
+.counter-number {
+  font-variant-numeric: tabular-nums;
+}
+
 /* Respect reduced motion preference */
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+  
+  .animated-gradient {
+    animation: none !important;
   }
 }
