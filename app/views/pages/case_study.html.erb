@@ -25,7 +25,7 @@
 </section>
 
 <!-- Main Hero Image -->
-<section class="section-dark pb-12">
+<section class="section-dark pb-20">
   <div class="container-custom">
     <div class="max-w-5xl mx-auto" data-aos="zoom-in">
       <% 
@@ -47,11 +47,11 @@
 </section>
 
 <!-- Overview Section -->
-<section class="section-light">
+<section class="py-20 lg:py-24 bg-white">
   <div class="container-custom">
     <div class="max-w-4xl mx-auto">
       <div data-aos="fade-up">
-        <h2 class="heading-lg text-graphite mb-6"><%= t('case_study.overview') %></h2>
+        <h2 class="heading-lg text-graphite mb-8"><%= t('case_study.overview') %></h2>
         <p class="text-lg text-steel leading-relaxed">
           <%= @case_study[:overview] %>
         </p>
@@ -61,7 +61,7 @@
 </section>
 
 <!-- Challenge & Solution -->
-<section class="section-dark">
+<section class="py-20 lg:py-24 bg-graphite">
   <div class="container-custom">
     <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
       <!-- Challenge -->
@@ -94,10 +94,10 @@
 </section>
 
 <!-- Results -->
-<section class="section-mist">
+<section class="py-20 lg:py-24 bg-mist">
   <div class="container-custom">
     <div class="max-w-4xl mx-auto">
-      <div class="text-center mb-12" data-aos="fade-up">
+      <div class="text-center mb-16" data-aos="fade-up">
         <h2 class="heading-lg text-graphite"><%= t('case_study.results') %></h2>
       </div>
       
@@ -118,11 +118,11 @@
 </section>
 
 <!-- Technologies -->
-<section class="section-light">
+<section class="py-20 lg:py-24 bg-white">
   <div class="container-custom">
     <div class="max-w-4xl mx-auto text-center">
       <div data-aos="fade-up">
-        <h2 class="heading-lg text-graphite mb-8"><%= t('case_study.technologies') %></h2>
+        <h2 class="heading-lg text-graphite mb-12"><%= t('case_study.technologies') %></h2>
         <div class="flex flex-wrap justify-center gap-3">
           <% @case_study[:technologies].each do |tech| %>
             <span class="px-4 py-2 rounded-full bg-meerkatPink/10 text-meerkatPink font-medium border border-meerkatPink/20">
@@ -147,10 +147,10 @@
 </section>
 
 <!-- Additional Screenshots -->
-<section class="section-mist">
+<section class="py-20 lg:py-24 bg-mist">
   <div class="container-custom">
     <div class="max-w-5xl mx-auto">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <% 
           # Map special cases for screenshot filenames
           screenshot_prefix = case @slug
@@ -194,7 +194,7 @@
 </section>
 
 <!-- CTA Section -->
-<section class="section-dark">
+<section class="py-24 lg:py-32 bg-graphite">
   <div class="container-custom">
     <div class="max-w-3xl mx-auto text-center space-y-6" data-aos="zoom-in">
       <h2 class="heading-lg text-white">
