@@ -1,0 +1,142 @@
+pt-BR:
+  site:
+    name: "Suricato Web"
+    tagline: "Sites que impressionam. Resultados que entregam."
+    email: "contato@suricato.web"
+    
+  nav:
+    home: "Início"
+    services: "Serviços"
+    work: "Trabalhos"
+    about: "Sobre"
+    contact: "Contato"
+    
+  hero:
+    title: "Sites que impressionam. Resultados que entregam."
+    subtitle: "Somos uma agência especialista em experiências digitais modernas — e-commerce, landing pages, SaaS e apps."
+    cta_primary: "Fale com a gente"
+    cta_secondary: "Ver portfólio"
+    
+  services:
+    title: "O que fazemos"
+    subtitle: "Criamos experiências digitais que combinam design impecável com performance de alto nível"
+    ecommerce:
+      title: "E-commerce"
+      description: "Lojas rápidas, conversão alta e integrações."
+    landing:
+      title: "Landing Pages"
+      description: "Páginas de campanha com performance e SEO."
+    saas:
+      title: "SaaS"
+      description: "Produtos digitais escaláveis e bem projetados."
+    apps:
+      title: "Apps"
+      description: "Experiências móveis elegantes e eficientes."
+      
+  process:
+    title: "Nosso processo"
+    subtitle: "Uma abordagem estruturada para transformar ideias em realidade digital"
+    discovery:
+      title: "Descoberta"
+      description: "Entendemos seu negócio, objetivos e público para criar a estratégia perfeita."
+    design:
+      title: "Design"
+      description: "Criamos interfaces modernas e intuitivas que refletem sua marca."
+    build:
+      title: "Construção"
+      description: "Desenvolvemos com as melhores tecnologias, garantindo performance e escalabilidade."
+    launch:
+      title: "Lançamento & Evolução"
+      description: "Entregamos o projeto e continuamos evoluindo baseado em dados e feedback."
+      
+  testimonials:
+    title: "O que nossos clientes dizem"
+    subtitle: "Parceiros que confiaram na gente para levar seus negócios ao próximo nível"
+    polegatch:
+      quote: "A Suricato transformou nossa visão em uma plataforma incrível para ciclistas."
+      author: "Polegatch Ride"
+      role: "Coaching de ciclismo"
+    madonna:
+      quote: "Um site moderno que captura perfeitamente a essência do nosso café."
+      author: "Madonna Cafe"
+      role: "Cafeteria"
+    aasports:
+      quote: "E-commerce rápido e intuitivo. Nossas vendas aumentaram significativamente."
+      author: "aasports"
+      role: "E-commerce esportivo"
+    watchbikes:
+      quote: "Plataforma completa que uniu nosso e-commerce com serviços de mecânica."
+      author: "watchbikes"
+      role: "E-commerce e oficina"
+    treino_facil:
+      quote: "App elegante e funcional para ciclistas. Nossos usuários adoram."
+      author: "Treino Fácil"
+      role: "App de ciclismo"
+    werace:
+      quote: "Criaram uma experiência única para compartilhamento de bikes."
+      author: "werace"
+      role: "Marketplace de bikes"
+    almora:
+      quote: "E-commerce de beleza com design sofisticado e performance excelente."
+      author: "Almora Botânica"
+      role: "Cosméticos naturais"
+    kb:
+      quote: "Site profissional que elevou nossa presença digital no mercado."
+      author: "Associação KB"
+      role: "Óleos CBD"
+      
+  cta:
+    title: "Pronto para construir algo extraordinário?"
+    description: "Vamos conversar sobre seu próximo projeto e como podemos ajudar a transformar sua visão em realidade."
+    button: "Iniciar projeto"
+    
+  work:
+    title: "Nosso trabalho"
+    subtitle: "Projetos que combinam design excepcional com tecnologia de ponta"
+    view_case: "Ver case"
+    all_projects: "Todos os projetos"
+    
+  about:
+    title: "Sobre a Suricato"
+    subtitle: "Especialistas em experiências digitais modernas"
+    mission_title: "Nossa missão"
+    mission: "Criar experiências digitais que impressionam e entregam resultados concretos. Acreditamos que design excepcional e tecnologia de ponta devem andar juntos."
+    values_title: "Nossos valores"
+    quality: "Qualidade sem concessões"
+    quality_desc: "Cada linha de código, cada pixel importa."
+    innovation: "Inovação constante"
+    innovation_desc: "Sempre atualizados com as melhores práticas e tecnologias."
+    results: "Foco em resultados"
+    results_desc: "Beleza que funciona, design que converte."
+    partnership: "Parceria verdadeira"
+    partnership_desc: "Seu sucesso é o nosso sucesso."
+    stack_title: "Nossa stack"
+    stack: "Ruby on Rails, React, Next.js, Tailwind CSS, PostgreSQL, e as melhores ferramentas modernas."
+    advantages_title: "Por que escolher a Suricato?"
+    performance: "Performance"
+    performance_desc: "Sites rápidos que convertem mais."
+    seo: "SEO otimizado"
+    seo_desc: "Apareça no topo do Google."
+    accessibility: "Acessibilidade"
+    accessibility_desc: "Produtos para todos."
+    support: "Suporte contínuo"
+    support_desc: "Estamos sempre aqui."
+    
+  contact:
+    title: "Vamos conversar?"
+    subtitle: "Entre em contato e vamos construir algo incrível juntos"
+    email_label: "Email"
+    social: "Siga-nos nas redes"
+    
+  footer:
+    copyright: "© 2024 Suricato Web. Todos os direitos reservados."
+    made_by: "Feito com ♥ pela Suricato Web"
+    
+  case_study:
+    overview: "Visão geral"
+    challenge: "Desafio"
+    solution: "Solução"
+    results: "Resultados"
+    technologies: "Tecnologias"
+    visit_site: "Visitar site"
+    back_to_work: "← Voltar para trabalhos"

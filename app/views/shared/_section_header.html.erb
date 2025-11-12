@@ -1,0 +1,19 @@
+<!-- Reusable Section Header Component -->
+<% 
+  # Usage: render 'shared/section_header', title: 'Title', subtitle: 'Subtitle', centered: true, dark: false 
+  centered ||= true
+  dark ||= false
+  text_class = centered ? 'text-center' : ''
+  color_class = dark ? 'text-white' : 'text-graphite'
+%>
+
+<div class="<%= text_class %> mb-12 space-y-4" data-aos="fade-up">
+  <h2 class="heading-lg <%= color_class %>">
+    <%= title %>
+  </h2>
+  <% if defined?(subtitle) && subtitle.present? %>
+    <p class="text-lg <%= dark ? 'text-white/70' : 'text-steel' %> max-w-3xl <%= centered ? 'mx-auto' : '' %>">
+      <%= subtitle %>
+    </p>
+  <% end %>
+</div>

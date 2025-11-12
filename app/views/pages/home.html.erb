@@ -1,0 +1,253 @@
+<!-- Hero Section -->
+<section class="section-dark min-h-[90vh] flex items-center relative overflow-hidden">
+  <!-- Background gradient accent -->
+  <div class="absolute inset-0 bg-gradient-to-br from-meerkatPink/10 via-transparent to-transparent"></div>
+  
+  <div class="container-custom relative z-10">
+    <div class="max-w-4xl mx-auto text-center space-y-8" data-aos="fade-up">
+      <!-- Main Headline -->
+      <h1 class="heading-xl text-white">
+        <%= t('hero.title') %>
+      </h1>
+      
+      <!-- Subtitle -->
+      <p class="text-xl text-white/80 max-w-2xl mx-auto">
+        <%= t('hero.subtitle') %>
+      </p>
+      
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
+        <a href="https://www.instagram.com/suricato.web/" target="_blank" rel="noopener noreferrer" class="btn-primary">
+          <%= t('hero.cta_primary') %>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </a>
+        <%= link_to work_path, class: "btn-ghost" do %>
+          <%= t('hero.cta_secondary') %>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+          </svg>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+    <svg class="w-6 h-6 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+    </svg>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section id="servicos" class="section-light">
+  <div class="container-custom">
+    <%= render 'shared/section_header', 
+      title: t('services.title'), 
+      subtitle: t('services.subtitle'),
+      dark: false %>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- E-commerce Card -->
+      <div class="card group" data-aos="fade-up" data-aos-delay="0">
+        <div class="w-12 h-12 rounded-lg bg-meerkatPink/10 flex items-center justify-center mb-4 group-hover:bg-meerkatPink group-hover:scale-110 transition-all">
+          <svg class="w-6 h-6 text-meerkatPink group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+          </svg>
+        </div>
+        <h3 class="heading-sm mb-3"><%= t('services.ecommerce.title') %></h3>
+        <p class="text-steel"><%= t('services.ecommerce.description') %></p>
+      </div>
+      
+      <!-- Landing Pages Card -->
+      <div class="card group" data-aos="fade-up" data-aos-delay="100">
+        <div class="w-12 h-12 rounded-lg bg-meerkatPink/10 flex items-center justify-center mb-4 group-hover:bg-meerkatPink group-hover:scale-110 transition-all">
+          <svg class="w-6 h-6 text-meerkatPink group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
+          </svg>
+        </div>
+        <h3 class="heading-sm mb-3"><%= t('services.landing.title') %></h3>
+        <p class="text-steel"><%= t('services.landing.description') %></p>
+      </div>
+      
+      <!-- SaaS Card -->
+      <div class="card group" data-aos="fade-up" data-aos-delay="200">
+        <div class="w-12 h-12 rounded-lg bg-meerkatPink/10 flex items-center justify-center mb-4 group-hover:bg-meerkatPink group-hover:scale-110 transition-all">
+          <svg class="w-6 h-6 text-meerkatPink group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
+          </svg>
+        </div>
+        <h3 class="heading-sm mb-3"><%= t('services.saas.title') %></h3>
+        <p class="text-steel"><%= t('services.saas.description') %></p>
+      </div>
+      
+      <!-- Apps Card -->
+      <div class="card group" data-aos="fade-up" data-aos-delay="300">
+        <div class="w-12 h-12 rounded-lg bg-meerkatPink/10 flex items-center justify-center mb-4 group-hover:bg-meerkatPink group-hover:scale-110 transition-all">
+          <svg class="w-6 h-6 text-meerkatPink group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+          </svg>
+        </div>
+        <h3 class="heading-sm mb-3"><%= t('services.apps.title') %></h3>
+        <p class="text-steel"><%= t('services.apps.description') %></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Process Section with Accordion -->
+<section class="section-dark">
+  <div class="container-custom">
+    <%= render 'shared/section_header', 
+      title: t('process.title'), 
+      subtitle: t('process.subtitle'),
+      dark: true %>
+    
+    <div class="max-w-4xl mx-auto" data-aos="fade-up">
+      <div id="accordion-process" data-accordion="collapse">
+        <!-- Discovery -->
+        <h2 id="accordion-process-heading-1">
+          <button type="button" class="flex items-center justify-between w-full p-6 font-medium text-left border border-white/10 rounded-t-xl hover:bg-white/5 transition-colors" data-accordion-target="#accordion-process-body-1" aria-expanded="true" aria-controls="accordion-process-body-1">
+            <span class="flex items-center gap-4">
+              <span class="flex items-center justify-center w-10 h-10 rounded-full bg-meerkatPink text-white font-display font-bold">1</span>
+              <span class="heading-sm text-white"><%= t('process.discovery.title') %></span>
+            </span>
+            <svg data-accordion-icon class="w-6 h-6 shrink-0 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </h2>
+        <div id="accordion-process-body-1" class="hidden" aria-labelledby="accordion-process-heading-1">
+          <div class="p-6 border border-t-0 border-white/10 bg-white/5">
+            <p class="text-white/70 leading-relaxed"><%= t('process.discovery.description') %></p>
+          </div>
+        </div>
+        
+        <!-- Design -->
+        <h2 id="accordion-process-heading-2">
+          <button type="button" class="flex items-center justify-between w-full p-6 font-medium text-left border border-t-0 border-white/10 hover:bg-white/5 transition-colors" data-accordion-target="#accordion-process-body-2" aria-expanded="false" aria-controls="accordion-process-body-2">
+            <span class="flex items-center gap-4">
+              <span class="flex items-center justify-center w-10 h-10 rounded-full bg-meerkatPink text-white font-display font-bold">2</span>
+              <span class="heading-sm text-white"><%= t('process.design.title') %></span>
+            </span>
+            <svg data-accordion-icon class="w-6 h-6 shrink-0 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </h2>
+        <div id="accordion-process-body-2" class="hidden" aria-labelledby="accordion-process-heading-2">
+          <div class="p-6 border border-t-0 border-white/10 bg-white/5">
+            <p class="text-white/70 leading-relaxed"><%= t('process.design.description') %></p>
+          </div>
+        </div>
+        
+        <!-- Build -->
+        <h2 id="accordion-process-heading-3">
+          <button type="button" class="flex items-center justify-between w-full p-6 font-medium text-left border border-t-0 border-white/10 hover:bg-white/5 transition-colors" data-accordion-target="#accordion-process-body-3" aria-expanded="false" aria-controls="accordion-process-body-3">
+            <span class="flex items-center gap-4">
+              <span class="flex items-center justify-center w-10 h-10 rounded-full bg-meerkatPink text-white font-display font-bold">3</span>
+              <span class="heading-sm text-white"><%= t('process.build.title') %></span>
+            </span>
+            <svg data-accordion-icon class="w-6 h-6 shrink-0 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </h2>
+        <div id="accordion-process-body-3" class="hidden" aria-labelledby="accordion-process-heading-3">
+          <div class="p-6 border border-t-0 border-white/10 bg-white/5">
+            <p class="text-white/70 leading-relaxed"><%= t('process.build.description') %></p>
+          </div>
+        </div>
+        
+        <!-- Launch -->
+        <h2 id="accordion-process-heading-4">
+          <button type="button" class="flex items-center justify-between w-full p-6 font-medium text-left border border-t-0 border-white/10 rounded-b-xl hover:bg-white/5 transition-colors" data-accordion-target="#accordion-process-body-4" aria-expanded="false" aria-controls="accordion-process-body-4">
+            <span class="flex items-center gap-4">
+              <span class="flex items-center justify-center w-10 h-10 rounded-full bg-meerkatPink text-white font-display font-bold">4</span>
+              <span class="heading-sm text-white"><%= t('process.launch.title') %></span>
+            </span>
+            <svg data-accordion-icon class="w-6 h-6 shrink-0 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </h2>
+        <div id="accordion-process-body-4" class="hidden" aria-labelledby="accordion-process-heading-4">
+          <div class="p-6 border border-t-0 border-white/10 rounded-b-xl bg-white/5">
+            <p class="text-white/70 leading-relaxed"><%= t('process.launch.description') %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="section-mist">
+  <div class="container-custom">
+    <%= render 'shared/section_header', 
+      title: t('testimonials.title'), 
+      subtitle: t('testimonials.subtitle'),
+      dark: false %>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <% [
+        { key: 'polegatch', delay: 0 },
+        { key: 'madonna', delay: 100 },
+        { key: 'aasports', delay: 200 },
+        { key: 'watchbikes', delay: 0 },
+        { key: 'treino_facil', delay: 100 },
+        { key: 'werace', delay: 200 },
+        { key: 'almora', delay: 0 },
+        { key: 'kb', delay: 100 }
+      ].each do |testimonial| %>
+        <div class="card" data-aos="fade-up" data-aos-delay="<%= testimonial[:delay] %>">
+          <div class="flex items-start gap-3 mb-4">
+            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-meerkatPink to-pink-600 flex items-center justify-center flex-shrink-0">
+              <span class="text-white font-display font-bold text-lg">
+                <%= t("testimonials.#{testimonial[:key]}.author").first %>
+              </span>
+            </div>
+            <div>
+              <h4 class="font-semibold text-graphite">
+                <%= t("testimonials.#{testimonial[:key]}.author") %>
+              </h4>
+              <p class="text-sm text-steel">
+                <%= t("testimonials.#{testimonial[:key]}.role") %>
+              </p>
+            </div>
+          </div>
+          <p class="text-graphite/80 italic leading-relaxed">
+            "<%= t("testimonials.#{testimonial[:key]}.quote") %>"
+          </p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA Section -->
+<section class="section-dark relative overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-r from-meerkatPink/20 to-pink-600/20"></div>
+  
+  <div class="container-custom relative z-10">
+    <div class="max-w-3xl mx-auto text-center space-y-6" data-aos="zoom-in">
+      <h2 class="heading-lg text-white">
+        <%= t('cta.title') %>
+      </h2>
+      <p class="text-xl text-white/80">
+        <%= t('cta.description') %>
+      </p>
+      <div class="pt-4">
+        <a href="https://www.instagram.com/suricato.web/" target="_blank" rel="noopener noreferrer" class="btn-primary text-lg px-8 py-4">
+          <%= t('cta.button') %>
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

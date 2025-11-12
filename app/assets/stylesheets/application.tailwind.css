@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+/* Google Fonts - Space Grotesk & Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+/* Tailwind v4 Custom Theme */
+@theme {
+  --color-meerkatPink: #EC407A;
+  --color-graphite: #111213;
+  --color-mist: #F3F3F3;
+  --color-steel: #BDBDBD;
+  
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+/* Custom Components */
+@layer components {
+  /* Buttons */
+  .btn-primary {
+    @apply bg-meerkatPink text-white font-semibold px-6 py-3 rounded-lg hover:bg-pink-600 transition-all duration-300 inline-flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-meerkatPink focus:ring-offset-2;
+  }
+  
+  .btn-ghost {
+    @apply border-2 border-white text-white font-semibold px-6 py-3 rounded-lg hover:bg-white hover:text-graphite transition-all duration-300 inline-flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-graphite;
+  }
+  
+  .btn-secondary {
+    @apply bg-white text-graphite font-semibold px-6 py-3 rounded-lg hover:bg-mist transition-all duration-300 inline-flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-graphite focus:ring-offset-2;
+  }
+  
+  /* Cards */
+  .card {
+    @apply bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-6;
+  }
+  
+  .card-dark {
+    @apply bg-graphite/50 backdrop-blur-sm border border-white/10 rounded-2xl hover:border-meerkatPink/50 transition-all duration-300 p-6;
+  }
+  
+  /* Badges */
+  .badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-meerkatPink/10 text-meerkatPink border border-meerkatPink/20;
+  }
+  
+  /* Section */
+  .section {
+    @apply py-16 md:py-24;
+  }
+  
+  .section-dark {
+    @apply bg-graphite text-white;
+  }
+  
+  .section-light {
+    @apply bg-white text-graphite;
+  }
+  
+  .section-mist {
+    @apply bg-mist text-graphite;
+  }
+  
+  /* Container */
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  /* Typography */
+  .heading-xl {
+    @apply font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-tight;
+  }
+  
+  .heading-lg {
+    @apply font-display text-3xl md:text-4xl lg:text-5xl font-bold leading-tight;
+  }
+  
+  .heading-md {
+    @apply font-display text-2xl md:text-3xl font-semibold leading-tight;
+  }
+  
+  .heading-sm {
+    @apply font-display text-xl md:text-2xl font-semibold leading-tight;
+  }
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Improve focus visibility */
+*:focus-visible {
+  @apply outline-2 outline-offset-2 outline-meerkatPink;
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

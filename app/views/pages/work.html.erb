@@ -1,0 +1,149 @@
+<% content_for :title, "#{t('work.title')} - #{t('site.name')}" %>
+
+<!-- Hero Section -->
+<section class="section-dark pt-32">
+  <div class="container-custom">
+    <%= render 'shared/section_header', 
+      title: t('work.title'), 
+      subtitle: t('work.subtitle'),
+      dark: true %>
+  </div>
+</section>
+
+<!-- Case Studies Grid -->
+<section class="section-dark pb-24">
+  <div class="container-custom">
+    <% 
+      case_studies = [
+        { 
+          slug: 'polegatch-ride', 
+          title: 'Polegatch Ride', 
+          category: 'SaaS', 
+          description: 'Plataforma de coaching de ciclismo',
+          tags: ['Wix', 'Stripe']
+        },
+        { 
+          slug: 'madonna-cafe', 
+          title: 'Madonna Cafe', 
+          category: 'Landing Page', 
+          description: 'Site moderno para cafeteria premium',
+          tags: ['Wix', 'Design', 'Performance', 'SEO']
+        },
+        { 
+          slug: 'aasports', 
+          title: 'aasports', 
+          category: 'E-commerce', 
+          description: 'Loja online de pinturas esportivas personalizadas',
+          tags: ['E-commerce', 'Shopify', 'Custom']
+        },
+        { 
+          slug: 'watchbikes', 
+          title: 'watchbikes', 
+          category: 'E-commerce', 
+          description: 'E-commerce de bikes e serviços de mecânica',
+          tags: ['E-commerce', 'Multi-Service', 'Booking']
+        },
+        { 
+          slug: 'treino-facil', 
+          title: 'Treino Fácil', 
+          category: 'App', 
+          description: 'Aplicativo de treino para ciclistas',
+          tags: ['Flutter', 'Fitness', 'Mobile']
+        },
+        { 
+          slug: 'werace', 
+          title: 'werace', 
+          category: 'SaaS', 
+          description: 'Marketplace de compartilhamento de bikes',
+          tags: ['Marketplace', 'Booking', 'Payments', 'Ruby on Rails']
+        },
+        { 
+          slug: 'almora-botanica', 
+          title: 'Almora Botânica', 
+          category: 'E-commerce', 
+          description: 'E-commerce de cosméticos naturais',
+          tags: ['E-commerce', 'Beauty', 'Branding', 'Shopify']
+        },
+        { 
+          slug: 'associacao-kb', 
+          title: 'Associação KB', 
+          category: 'Landing Page', 
+          description: 'Site institucional para óleos CBD',
+          tags: ['Institucional', 'SEO', 'Compliance', 'Shopify']
+        }
+      ]
+    %>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <% case_studies.each_with_index do |project, index| %>
+        <article class="card-dark group cursor-pointer" data-aos="fade-up" data-aos-delay="<%= (index % 3) * 100 %>">
+          <%= link_to case_study_path(project[:slug]), class: "block" do %>
+            <!-- Image Placeholder -->
+            <div class="aspect-video bg-gradient-to-br from-meerkatPink/20 to-pink-600/20 rounded-xl mb-4 flex items-center justify-center overflow-hidden group-hover:scale-105 transition-transform">
+              <div class="text-center p-6">
+                <div class="w-16 h-16 mx-auto mb-3 rounded-full bg-white/10 flex items-center justify-center">
+                  <svg class="w-8 h-8 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                  </svg>
+                </div>
+                <p class="text-white/30 text-sm">Adicione sua imagem aqui</p>
+              </div>
+            </div>
+            
+            <!-- Content -->
+            <div class="space-y-3">
+              <div class="flex items-center gap-2">
+                <span class="badge"><%= project[:category] %></span>
+              </div>
+              
+              <h3 class="heading-sm text-white group-hover:text-meerkatPink transition-colors">
+                <%= project[:title] %>
+              </h3>
+              
+              <p class="text-white/60 text-sm">
+                <%= project[:description] %>
+              </p>
+              
+              <div class="flex flex-wrap gap-2 pt-2">
+                <% project[:tags].each do |tag| %>
+                  <span class="text-xs px-2 py-1 rounded bg-white/5 text-white/50">
+                    <%= tag %>
+                  </span>
+                <% end %>
+              </div>
+              
+              <div class="flex items-center gap-2 text-meerkatPink text-sm font-medium pt-2">
+                <%= t('work.view_case') %>
+                <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+              </div>
+            </div>
+          <% end %>
+        </article>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="section-light">
+  <div class="container-custom">
+    <div class="max-w-3xl mx-auto text-center space-y-6" data-aos="zoom-in">
+      <h2 class="heading-lg text-graphite">
+        <%= t('cta.title') %>
+      </h2>
+      <p class="text-xl text-steel">
+        <%= t('cta.description') %>
+      </p>
+      <div class="pt-4">
+        <a href="https://www.instagram.com/suricato.web/" target="_blank" rel="noopener noreferrer" class="btn-primary">
+          <%= t('cta.button') %>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

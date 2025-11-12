@@ -1,0 +1,186 @@
+<% content_for :title, "#{t('about.title')} - #{t('site.name')}" %>
+
+<!-- Hero Section -->
+<section class="section-dark pt-32">
+  <div class="container-custom">
+    <%= render 'shared/section_header', 
+      title: t('about.title'), 
+      subtitle: t('about.subtitle'),
+      dark: true %>
+  </div>
+</section>
+
+<!-- Mission Section -->
+<section class="section-dark pb-12">
+  <div class="container-custom">
+    <div class="max-w-4xl mx-auto" data-aos="fade-up">
+      <div class="card-dark">
+        <h3 class="heading-md text-white mb-4"><%= t('about.mission_title') %></h3>
+        <p class="text-white/70 text-lg leading-relaxed">
+          <%= t('about.mission') %>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Values Section -->
+<section class="section-light">
+  <div class="container-custom">
+    <div class="text-center mb-12" data-aos="fade-up">
+      <h2 class="heading-lg text-graphite mb-4"><%= t('about.values_title') %></h2>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Quality -->
+      <div class="card" data-aos="fade-up" data-aos-delay="0">
+        <div class="w-12 h-12 rounded-lg bg-meerkatPink/10 flex items-center justify-center mb-4">
+          <svg class="w-6 h-6 text-meerkatPink" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+        </div>
+        <h3 class="heading-sm mb-3"><%= t('about.quality') %></h3>
+        <p class="text-steel"><%= t('about.quality_desc') %></p>
+      </div>
+      
+      <!-- Innovation -->
+      <div class="card" data-aos="fade-up" data-aos-delay="100">
+        <div class="w-12 h-12 rounded-lg bg-meerkatPink/10 flex items-center justify-center mb-4">
+          <svg class="w-6 h-6 text-meerkatPink" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+          </svg>
+        </div>
+        <h3 class="heading-sm mb-3"><%= t('about.innovation') %></h3>
+        <p class="text-steel"><%= t('about.innovation_desc') %></p>
+      </div>
+      
+      <!-- Results -->
+      <div class="card" data-aos="fade-up" data-aos-delay="200">
+        <div class="w-12 h-12 rounded-lg bg-meerkatPink/10 flex items-center justify-center mb-4">
+          <svg class="w-6 h-6 text-meerkatPink" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+          </svg>
+        </div>
+        <h3 class="heading-sm mb-3"><%= t('about.results') %></h3>
+        <p class="text-steel"><%= t('about.results_desc') %></p>
+      </div>
+      
+      <!-- Partnership -->
+      <div class="card" data-aos="fade-up" data-aos-delay="300">
+        <div class="w-12 h-12 rounded-lg bg-meerkatPink/10 flex items-center justify-center mb-4">
+          <svg class="w-6 h-6 text-meerkatPink" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+          </svg>
+        </div>
+        <h3 class="heading-sm mb-3"><%= t('about.partnership') %></h3>
+        <p class="text-steel"><%= t('about.partnership_desc') %></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stack Section -->
+<section class="section-dark">
+  <div class="container-custom">
+    <div class="max-w-4xl mx-auto text-center space-y-6" data-aos="fade-up">
+      <h2 class="heading-lg text-white"><%= t('about.stack_title') %></h2>
+      <p class="text-xl text-white/70 leading-relaxed">
+        <%= t('about.stack') %>
+      </p>
+      
+      <!-- Tech Icons/Badges -->
+      <div class="flex flex-wrap justify-center gap-3 pt-6">
+        <% ['Ruby on Rails', 'React', 'Next.js', 'Tailwind CSS', 'PostgreSQL', 'TypeScript', 'Node.js', 'Docker'].each do |tech| %>
+          <span class="px-4 py-2 rounded-full bg-white/10 text-white font-medium text-sm border border-white/20">
+            <%= tech %>
+          </span>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Advantages Section -->
+<section class="section-mist">
+  <div class="container-custom">
+    <div class="text-center mb-12" data-aos="fade-up">
+      <h2 class="heading-lg text-graphite mb-4"><%= t('about.advantages_title') %></h2>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Performance -->
+      <div class="card" data-aos="fade-up" data-aos-delay="0">
+        <div class="flex items-center gap-3 mb-3">
+          <div class="w-10 h-10 rounded-lg bg-meerkatPink flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h3 class="heading-sm"><%= t('about.performance') %></h3>
+        </div>
+        <p class="text-steel"><%= t('about.performance_desc') %></p>
+      </div>
+      
+      <!-- SEO -->
+      <div class="card" data-aos="fade-up" data-aos-delay="100">
+        <div class="flex items-center gap-3 mb-3">
+          <div class="w-10 h-10 rounded-lg bg-meerkatPink flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+          </div>
+          <h3 class="heading-sm"><%= t('about.seo') %></h3>
+        </div>
+        <p class="text-steel"><%= t('about.seo_desc') %></p>
+      </div>
+      
+      <!-- Accessibility -->
+      <div class="card" data-aos="fade-up" data-aos-delay="200">
+        <div class="flex items-center gap-3 mb-3">
+          <div class="w-10 h-10 rounded-lg bg-meerkatPink flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+            </svg>
+          </div>
+          <h3 class="heading-sm"><%= t('about.accessibility') %></h3>
+        </div>
+        <p class="text-steel"><%= t('about.accessibility_desc') %></p>
+      </div>
+      
+      <!-- Support -->
+      <div class="card" data-aos="fade-up" data-aos-delay="300">
+        <div class="flex items-center gap-3 mb-3">
+          <div class="w-10 h-10 rounded-lg bg-meerkatPink flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path>
+            </svg>
+          </div>
+          <h3 class="heading-sm"><%= t('about.support') %></h3>
+        </div>
+        <p class="text-steel"><%= t('about.support_desc') %></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="section-dark">
+  <div class="container-custom">
+    <div class="max-w-3xl mx-auto text-center space-y-6" data-aos="zoom-in">
+      <h2 class="heading-lg text-white">
+        <%= t('cta.title') %>
+      </h2>
+      <p class="text-xl text-white/80">
+        <%= t('cta.description') %>
+      </p>
+      <div class="pt-4">
+        <a href="https://www.instagram.com/suricato.web/" target="_blank" rel="noopener noreferrer" class="btn-primary">
+          <%= t('cta.button') %>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
