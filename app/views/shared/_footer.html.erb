@@ -62,11 +62,17 @@
     </div>
     
     <!-- Bottom Bar -->
-    <div class="border-t border-white/10 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-      <p class="text-white/50 text-sm">
-        <%= t('footer.copyright') %>
-      </p>
-      <p class="text-white/50 text-sm">
+    <div class="border-t border-white/10 pt-8">
+      <div class="flex flex-col sm:flex-row justify-between items-center gap-4 mb-4">
+        <p class="text-white/50 text-sm">
+          <%= t('footer.copyright') %>
+        </p>
+        <div class="flex gap-6">
+          <%= link_to "Privacidade", privacy_path, class: "text-white/50 hover:text-meerkatPink transition-colors text-sm" %>
+          <%= link_to "Termos de Uso", terms_path, class: "text-white/50 hover:text-meerkatPink transition-colors text-sm" %>
+        </div>
+      </div>
+      <p class="text-white/50 text-sm text-center sm:text-left">
         <%= t('footer.made_by') %>
       </p>
     </div>

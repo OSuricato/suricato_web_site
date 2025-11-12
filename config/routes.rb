@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   get "trabalhos", to: "pages#work", as: :work
   get "sobre", to: "pages#about", as: :about
   get "contato", to: "pages#contact", as: :contact
+  get "privacidade", to: "pages#privacy", as: :privacy
+  get "termos", to: "pages#terms", as: :terms
   
   # Case study detail page (slug-based)
   get "trabalhos/:slug", to: "pages#case_study", as: :case_study

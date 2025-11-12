@@ -268,7 +268,7 @@ Fully responsive with mobile-first approach:
 
 ## 📄 License
 
-© 2024 Suricato Web. All rights reserved.
+© 2025 Suricato Web. All rights reserved.
 
 ---
 
