@@ -1,7 +1,7 @@
 <% content_for :title, "#{t('work.title')} - #{t('site.name')}" %>
 
 <!-- Hero Section -->
-<section class="section-dark pt-32">
+<section class="section-dark pt-32 pb-12">
   <div class="container-custom">
     <%= render 'shared/section_header', 
       title: t('work.title'), 
@@ -11,7 +11,7 @@
 </section>
 
 <!-- Case Studies Grid -->
-<section class="section-dark pb-24">
+<section class="section-dark pb-20">
   <div class="container-custom">
     <% 
       case_studies = [
@@ -122,9 +122,9 @@
 </section>
 
 <!-- CTA Section -->
-<section class="section-light">
+<section class="py-24 lg:py-32 bg-white">
   <div class="container-custom">
-    <div class="max-w-3xl mx-auto text-center space-y-6" data-aos="zoom-in">
+    <div class="max-w-3xl mx-auto text-center space-y-8" data-aos="zoom-in">
       <h2 class="heading-lg text-graphite">
         <%= t('cta.title') %>
       </h2>
